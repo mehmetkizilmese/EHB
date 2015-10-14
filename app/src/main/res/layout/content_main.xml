@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <TextView android:text="5" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:id="@+id/lblCurrentValue"
+        android:layout_below="@+id/lblPreviousValue"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lower"
+        android:id="@+id/btnLower"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/lblCurrentValue"
+        android:layout_toLeftOf="@+id/btnEqual"
+        android:layout_toStartOf="@+id/btnEqual" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EQUAL"
+        android:id="@+id/btnEqual"
+        android:layout_alignTop="@+id/btnLower"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIGHER"
+        android:id="@+id/btnHigher"
+        android:layout_alignTop="@+id/btnEqual"
+        android:layout_toRightOf="@+id/btnEqual"
+        android:layout_toEndOf="@+id/btnEqual" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess next Playtype"
+        android:id="@+id/textView"
+        android:layout_above="@+id/btnEqual"
+        android:layout_alignLeft="@+id/btnLower"
+        android:layout_alignStart="@+id/btnLower" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Value"
+        android:id="@+id/textView2"
+        android:layout_alignBaseline="@+id/lblCurrentValue"
+        android:layout_alignBottom="@+id/lblCurrentValue"
+        android:layout_toLeftOf="@+id/btnEqual"
+        android:layout_toStartOf="@+id/btnEqual" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="65sp"
+        android:text="Score = 0"
+        android:id="@+id/lblScore"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Value"
+        android:id="@+id/textView4"
+        android:layout_alignBaseline="@+id/lblPreviousValue"
+        android:layout_alignBottom="@+id/lblPreviousValue"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:text="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:id="@+id/lblPreviousValue"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/lblCurrentValue"
+        android:layout_alignStart="@+id/lblCurrentValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Result"
+        android:id="@+id/lblResult"
+        android:layout_below="@+id/lblScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:textSize="50sp"/>
+
+</RelativeLayout>
